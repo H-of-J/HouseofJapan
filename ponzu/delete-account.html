@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PONZUのGoogle連携解除と、アカウント情報・友達紹介履歴の削除。アプリをインストールしていない方もこのページから手続きできます。">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#182e2b">
+  <title>Google連携を解除 | PONZU</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="delete-account.css">
+  <script type="module" src="delete-account.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="../"><span class="mark" aria-hidden="true">日</span>House of Japan</a>
+      <nav aria-label="ナビゲーション"><a href="privacy.html">PONZUのプライバシーポリシー</a></nav>
+    </header>
+    <main id="main" class="deletion-page">
+      <div class="eyebrow">PONZU / Account</div>
+      <h1>Google連携を解除</h1>
+      <p class="intro">PONZUとのGoogle連携を解除し、<br class="desktop-break">アカウント情報と友達紹介の履歴を削除します。</p>
+
+      <section class="scope" aria-labelledby="scope-heading">
+        <h2 id="scope-heading">削除されるもの</h2>
+        <ul>
+          <li>PONZUのログイン情報・ユーザー情報</li>
+          <li>あなたの紹介コードと、あなたに関連する紹介履歴</li>
+          <li>PONZU側に保存された購入確認用の情報・無料利用登録（ある場合）</li>
+        </ul>
+        <p>Googleアカウント自体は削除されません。端末に保存した録音・音声ファイル、Google Playの購入履歴には影響しません。定期購入も自動では解約されません。</p>
+        <p>削除後、紹介コードは使えなくなります。削除した情報は元に戻せません。</p>
+      </section>
+
+      <section class="action-card" aria-labelledby="action-heading" aria-busy="true" id="action-card">
+        <div class="step-label" id="step-label">本人確認 → 内容の確認 → 削除</div>
+        <h2 id="action-heading">PONZUで使っているGoogleアカウントで確認</h2>
+        <p id="status" role="status" aria-live="polite">受付状況を確認しています。</p>
+        <button id="start" type="button" disabled>Googleで本人確認</button>
+        <div id="google-button" aria-label="Googleで本人確認"></div>
+
+        <form id="confirmation" hidden>
+          <p class="account-label">削除するPONZUアカウント</p>
+          <p class="account-email" id="account-email"></p>
+          <label class="consent"><input type="checkbox" id="consent" required> <span>上記の情報を削除し、元に戻せないことを確認しました。</span></label>
+          <div class="actions">
+            <button type="submit" id="delete" class="danger" disabled>連携を解除して削除する</button>
+            <button type="button" id="cancel" class="secondary">キャンセル</button>
+          </div>
+        </form>
+        <button id="retry" type="button" class="secondary" hidden>もう一度確認する</button>
+        <noscript><p>この手続きにはJavaScriptが必要です。ブラウザのJavaScriptを有効にしてください。この状態では削除は実行されません。</p></noscript>
+      </section>
+      <p class="footnote">アプリのインストールは不要です。本人確認だけでは削除されません。削除処理中の安全な再試行と不正な再書き込みの防止のため、内部識別子と処理状況を一時的に保持する場合があります。</p>
+    </main>
+    <footer><span>© 2026 House of Japan</span><a href="privacy.html">PONZUのプライバシーポリシー</a><a href="../">House of Japan</a></footer>
+  </div>
+</body>
+</html>
